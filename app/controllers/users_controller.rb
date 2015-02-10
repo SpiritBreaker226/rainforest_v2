@@ -9,7 +9,7 @@ class UsersController < ApplicationController
   	if @user.save 
   		redirect_to(products_path, notice: "User sueecessful created") 
   	else
-  		flash.now("Unable to create user")
+  		flash.now[:alert] = "Unable to create user"
   		render(:naw)
   	end
   end

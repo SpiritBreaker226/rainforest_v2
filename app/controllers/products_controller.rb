@@ -14,7 +14,11 @@ class ProductsController < ApplicationController
   def create
   	@product = Product.new(product_params)
 
-  	@product.save ? redirect_to(products_path) : render(:new)
+    if @product.save
+      redirect_to(products_path, notice: "Product created") 
+    else 
+      flash.now[:alert] = "Unable to create product"
+      render(:new)
   end
 
   def edit
