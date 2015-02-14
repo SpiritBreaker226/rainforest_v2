@@ -19,6 +19,7 @@ class ProductsController < ApplicationController
     else 
       flash.now[:alert] = "Unable to create product"
       render(:new)
+    end
   end
 
   def edit
