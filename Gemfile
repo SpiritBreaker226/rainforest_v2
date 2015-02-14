@@ -46,6 +46,12 @@ end
 
 group :development, :test do
   gem 'pry-rails'
-  gem 'awesome_print'
-  gem 'faker'
+	gem 'pry-byebug'
+	gem 'awesome_print'
+	gem 'binding_of_caller'
+	gem 'better_errors'
+	gem 'quiet_assets'
+	gem 'faker'
+	gem 'rspec-rails'
+	gem 'factory_girl_rails'
 end
