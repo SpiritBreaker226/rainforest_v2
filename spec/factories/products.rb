@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :product do
-    name "My Test Proudct"
-		description "My Product Description"
-		price_in_cents 100
+  name { Faker::Company.name }
+		description { Faker::Lorem.sentence }
+		price_in_cents { (100..300).to_a.sample }
   end
 end
