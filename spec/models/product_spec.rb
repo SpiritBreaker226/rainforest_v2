@@ -17,5 +17,12 @@ describe Product do
     expect(product).to be_valid
   end
 
+  it "should have a description" do
+  	expect(product.descriptiones).not_to be_nil
+  end
+
+  it "should have a price" do
+  	expect(product.price).not_to be_nil
+  end
 
 end
